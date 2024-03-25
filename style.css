@@ -27,7 +27,7 @@ input {
   width: 50%;
 }
 input:hover {
-  box-shadow: 2px 2px 0px 0px whitesmoke;
+  box-shadow: 2px 2px 0px 0px grey;
 }
 button {
   padding: 10px;
@@ -35,8 +35,8 @@ button {
   border-width: 1px;
 }
 button:hover {
-  box-shadow: 2px 2px 0px 0px whitesmoke;
+  box-shadow: 2px 2px 0px 0px grey;
 }
 p {
-  font-size: 150% ;
+  font-size: 150%;
 }
