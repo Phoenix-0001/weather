@@ -21,7 +21,7 @@ function handleResponse(value, error) {
     para.innerText = `Its ${value.current.temp_c} degree celsius outside. 
     Humidity is ${value.current.humidity} %. 
     Overall the condition is: ${value.current.condition.text}`;
- });
+  });
 }
 
 function getCurrentTime() {
