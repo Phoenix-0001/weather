@@ -12,16 +12,21 @@ function getRegion() {
 function getWeather(region) {
   var api_link = `http://api.weatherapi.com/v1/current.json?key=52f7ed3e787845b7bf894652240407&q=${region}&aqi=no`;
   console.log(api_link);
-  fetch(api_link).then(handleResponse);
+  fetch(api_link)
+    .then(response => response.json())
+    .then(handleResponse)
+    .catch(error => {
+      console.error("Error fetching the weather data:", error);
+      para.innerText = "Error fetching the weather data.";
+    });
 }
 
-function handleResponse(value, error) {
-  value.json().then(function (value, error) {
+function handleResponse(value) {
     console.log(value);
     para.innerText = `Its ${value.current.temp_c} degree celsius outside. 
     Humidity is ${value.current.humidity} %. 
     Overall the condition is: ${value.current.condition.text}`;
-  });
+  );
 }
 
 function getCurrentTime() {
