@@ -10,7 +10,7 @@ function getRegion() {
 }
 
 function getWeather(region) {
-  var api_link = `http://api.weatherapi.com/v1/current.json?key=335fedeb5e1645e5b6a112613240703&q=${region}&aqi=no`;
+  var api_link = `http://api.weatherapi.com/v1/current.json?key=52f7ed3e787845b7bf894652240407&q=${region}&aqi=no`;
   console.log(api_link);
   fetch(api_link).then(handleResponse);
 }
